@@ -36,10 +36,7 @@ export class MapPage {
     }
  
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-       var input = document.getElementById('search-input');
-      var searchBox = new google.maps.places.SearchBox(
-        /** @type {HTMLInputElement} */(input));
-   //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
   }
   openMap(){
     
