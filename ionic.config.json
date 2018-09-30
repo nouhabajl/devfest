@@ -1,0 +1,7 @@
+{
+  "name": "FasTravel",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
