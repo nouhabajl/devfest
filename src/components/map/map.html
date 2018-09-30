@@ -1,0 +1,19 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{title}}</ion-title>
+        <ion-buttons end>
+        <button ion-button (click)="goBack()">Close</button>
+        </ion-buttons>
+    </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content padding>
+      <ion-searchbar id="search-input"
+      [showCancelButton]="shouldShowCancel">
+      </ion-searchbar>
+      <div #map id="map"></div>
+  </ion-content>
+  

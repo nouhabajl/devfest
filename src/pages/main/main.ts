@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import { MapPage } from '../map/map';
+import { MapComponent } from '../../components/map/map';
 
 /**,ElementRef
  * Generated class for the MainPage page.
@@ -8,7 +8,6 @@ import { MapPage } from '../map/map';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-declare var google;
 
 @IonicPage()
 @Component({
@@ -27,8 +26,9 @@ export class MainPage {
     console.log('ionViewDidLoad MainPage');
     
   }
-  openMap() {
-    const modal = this.modalCtrl.create(MapPage);
+  openMap(title) {
+    console.log(title)
+    const modal = this.modalCtrl.create(MapComponent, { title : title});
     modal.present();
   }
 

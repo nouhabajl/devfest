@@ -9,7 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import{ MainPage } from '../pages/main/main';
 import{SolutionsPage}from'../pages/solutions/solutions';
-import { MapPage } from '../pages/map/map';
+import { MapComponent } from '../components/map/map';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { MapPage } from '../pages/map/map';
     HomePage,
     LoginPage,
     MainPage, 
-    MapPage
+    MapComponent, 
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +29,9 @@ import { MapPage } from '../pages/map/map';
     MyApp,
     HomePage,
     LoginPage,
-    MainPage,
-    MapPage
+    MainPage, 
+    MapComponent
+    
   ],
   providers: [
     StatusBar,

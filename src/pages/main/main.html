@@ -17,12 +17,17 @@
 
 
 <ion-content padding>
-  <button ion-button (click)="openMap()">departure</button>
-  <button ion-button>arrival</button>
+    <h1>Chose your departure :</h1>
+      <button block ion-button (click)="openMap('Departure')">departure</button>
+      <h1>Chose your targets :</h1>
+      <button block ion-button end (click)="openMap('Arrival')">arrival</button>
+
+  <h1>Chose your time :  </h1>
   <ion-item>
     <ion-label>Start Time</ion-label>
     <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="date"></ion-datetime>
 
   </ion-item>
-  <button ion-button>submit</button> 
+
+  <button block ion-button>submit</button> 
 </ion-content>

@@ -1,23 +1,25 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the MapPage page.
+ * Generated class for the MapComponent component.
  *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
  */
 declare var google;
-@IonicPage()
 @Component({
-  selector: 'page-map',
-  templateUrl: 'map.html',
+  selector: 'map',
+  templateUrl: 'map.html'
 })
-export class MapPage {
+export class MapComponent {
+
   map: any;
+  title = "Arrival";
   @ViewChild('map') mapElement: ElementRef;
   @ViewChild('search-input') mapSearch: ElementRef;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, params: NavParams) {
+    this.title = params.get("title");
   }
 
   ionViewDidLoad() {
@@ -41,4 +43,7 @@ export class MapPage {
   openMap(){
     
   }
+  goBack() {
+    this.navCtrl.pop();
+    }
 }
